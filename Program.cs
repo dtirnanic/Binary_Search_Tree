@@ -10,6 +10,14 @@ namespace BST
     {
         static void Main(string[] args)
         {
+            Binary_Search bs = new Binary_Search();
+
+            bs.Add(24);
+            bs.Add(30);
+
+
+
+
         }
     }
 }
