@@ -12,19 +12,63 @@ namespace BST
 
 
 
-        public void Search(int value)
+        public int Search(int newData)
         {
-   
+            Node currentNode = rootNode;
+
+            while (true)
+            {
+                if (newData > currentNode.data)
+                {
+                    if (newData > currentNode.rightChild.data)
+                    {
+                        rootNode = currentNode.rightChild;
+                    }
+                    else
+                    {
+                        currentNode = currentNode.rightChild;
+                    }
+                }
+
+                else if (newData < currentNode.data)
+                {
+                    if (newData < currentNode.leftChild.data)
+                    {
+                        rootNode = currentNode.leftChild;  
+                    }
+                    else
+                    {
+                        currentNode = currentNode.leftChild;
+                    }
+
+                }
+
+                else if (newData == currentNode.data)
+                {
+                    return currentNode.data;
+                }
+
+                else
+                {
+
+                }
+            }
 
         }
 
+
+    
+    
+
+
         public void Add(int newData)
         {
-            if (rootNode == null) //if rootNode is not yet valued
+            if (rootNode == null)
             {
                 rootNode = new Node(newData);
             }
             Node currentNode = rootNode;
+
             while (true)
             {
                 if (newData >= currentNode.data)
@@ -39,14 +83,20 @@ namespace BST
                         currentNode = currentNode.rightChild;
                     }
                 }
-            }
-            while (true)
-            {
-                if (newData < currentNode.data)
+
+                else if (newData < currentNode.data)
                 {
+                    if(currentNode.leftChild == null)
+                    {
+                        currentNode.leftChild = new Node(newData);
+                        return;
+                    }
+                    else
+                    {
+                        currentNode = currentNode.leftChild;
+                    }
 
                 }
-
 
             }
 

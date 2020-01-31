@@ -14,7 +14,15 @@ namespace BST
 
             bs.Add(24);
             bs.Add(30);
+            bs.Add(20);
+            bs.Add(14);
+            bs.Add(15);
+            bs.Add(27);
+            bs.Add(28);
+            bs.Search(14);
+            bs.Search(28);
 
+            Console.WriteLine();
 
 
 
