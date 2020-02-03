@@ -22,7 +22,7 @@ namespace BST
                 {
                     if (newData > currentNode.rightChild.data)
                     {
-                        rootNode = currentNode.rightChild;
+                        currentNode = currentNode.rightChild;
                     }
                     else
                     {
@@ -34,7 +34,7 @@ namespace BST
                 {
                     if (newData < currentNode.leftChild.data)
                     {
-                        rootNode = currentNode.leftChild;  
+                        currentNode = currentNode.leftChild;  
                     }
                     else
                     {
@@ -48,18 +48,9 @@ namespace BST
                     return currentNode.data;
                 }
 
-                else
-                {
-
-                }
             }
 
         }
-
-
-    
-    
-
 
         public void Add(int newData)
         {
@@ -95,12 +86,8 @@ namespace BST
                     {
                         currentNode = currentNode.leftChild;
                     }
-
                 }
-
             }
-
-
         }
     }
 }
